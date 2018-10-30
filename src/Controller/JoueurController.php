@@ -13,11 +13,14 @@ use Model;
 class JoueurController extends AbstractController
 {
     protected $twig;
-
+    public function map()
+    {
+        return $this->twig->render('map.html.twig');
+    }
     public function gain()
 
     {
-
+        session_start();
 
         $random1 = rand(1,2);
         $random2 = rand(1,5);
@@ -62,6 +65,6 @@ class JoueurController extends AbstractController
 
 
 
-        return $this->twig->render('gain.html.twig', ['name1' => $name1, 'name2' => $name2, 'name3'=> $name3, 'random1' => $random1, 'random2' => $random2, 'random3' => $random3]);
+        return $this->twig->render('gain.html.twig', ['name1' => $name1, 'name2' => $name2, 'name3'=> $name3, 'random1' => $random1, 'random2' => $random2, 'random3' => $random3, 'session' => $_SESSION]);
     }
 }

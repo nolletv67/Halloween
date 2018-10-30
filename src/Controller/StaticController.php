@@ -19,17 +19,19 @@ class StaticController extends AbstractController
 
     public function login()
     {
-        if (isset($_POST['pseudo'])) {
+
+      if ((@$_POST['pseudo'] <> '') && ($_POST['login'] == 'login')) {
+
+           session_start();
+
+           $_SESSION['pseudo'] = $_POST['pseudo'];
+
+           echo $_POST['pseudo'];
 
 
-            session_start();
+           header('Location: /map/');
+       }
 
-            $_SESSION['pseudo'] = $_POST['pseudo'];
-
-
-            header('Location: /map/');
-
-        }
         return $this->twig->render('login.html.twig');
     }
 }
