@@ -74,6 +74,7 @@ class ComposerStaticInit55c85bc5ac341fa403462242980c0816
         'Controller\\AbstractController' => __DIR__ . '/../..' . '/src/Controller/AbstractController.php',
         'Controller\\BonbonController' => __DIR__ . '/../..' . '/src/Controller/BonbonController.php',
         'Controller\\JoueurController' => __DIR__ . '/../..' . '/src/Controller/JoueurController.php',
+        'Controller\\StaticController' => __DIR__ . '/../..' . '/src/Controller/StaticController.php',
         'FastRoute\\BadRouteException' => __DIR__ . '/..' . '/nikic/fast-route/src/BadRouteException.php',
         'FastRoute\\DataGenerator' => __DIR__ . '/..' . '/nikic/fast-route/src/DataGenerator.php',
         'FastRoute\\DataGenerator\\CharCountBased' => __DIR__ . '/..' . '/nikic/fast-route/src/DataGenerator/CharCountBased.php',

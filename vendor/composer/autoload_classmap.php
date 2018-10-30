@@ -10,6 +10,7 @@ return array(
     'Controller\\AbstractController' => $baseDir . '/src/Controller/AbstractController.php',
     'Controller\\BonbonController' => $baseDir . '/src/Controller/BonbonController.php',
     'Controller\\JoueurController' => $baseDir . '/src/Controller/JoueurController.php',
+    'Controller\\StaticController' => $baseDir . '/src/Controller/StaticController.php',
     'FastRoute\\BadRouteException' => $vendorDir . '/nikic/fast-route/src/BadRouteException.php',
     'FastRoute\\DataGenerator' => $vendorDir . '/nikic/fast-route/src/DataGenerator.php',
     'FastRoute\\DataGenerator\\CharCountBased' => $vendorDir . '/nikic/fast-route/src/DataGenerator/CharCountBased.php',

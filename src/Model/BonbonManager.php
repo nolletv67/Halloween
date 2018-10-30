@@ -20,7 +20,7 @@ class BonbonManager extends AbstractManager{
 
     public function random()
     {
-        $statement = $this->pdo->prepare("SELECT name FROM " . $this->table . " ORDER BY RAND() LIMIT 1");
+        $statement = $this->pdo->prepare("SELECT name, marque FROM " . $this->table . " ORDER BY RAND() LIMIT 1");
         $statement->setFetchMode(\PDO::FETCH_BOTH);
         $statement->execute();
         return $statement->fetch();
