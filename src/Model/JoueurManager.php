@@ -28,6 +28,16 @@ class JoueurManager extends AbstractManager
         }
     }
 
+
+
+
+
+
+
+
+
+
+
     public function update($category) //requête SQL d'insertion pour éditer.
     {
         $statement = $this->pdo->prepare("UPDATE " . self::TABLE ." SET category.`name` = :name WHERE category.`id` = :id"); //UPDATE ... SET = syntaxe SQL pour éditer
