@@ -2,4 +2,5 @@
 *.cache
 app/db.php
 .idea
-.vendor
+/vendor/
+

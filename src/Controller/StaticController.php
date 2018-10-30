@@ -11,6 +11,12 @@ namespace Controller;
 
 class StaticController extends AbstractController
 {
+
+    public function index(){
+        return $this->twig->render('index.html.twig');
+    }
+
+
     public function login()
     {
         if (isset($_POST['pseudo'])) {
@@ -21,7 +27,7 @@ class StaticController extends AbstractController
             $_SESSION['pseudo'] = $_POST['pseudo'];
 
 
-            header('Location: /map');
+            header('Location: /map/');
 
         }
         return $this->twig->render('login.html.twig');
