@@ -9,6 +9,9 @@ h1{
     text-shadow: 0 0 50px rgb(9,18,32);
 }
 
+a{
+    color: white;
+}
 
 .image_header{
     padding-left: 0px;
@@ -34,4 +37,8 @@ h1{
 .form-control{
     font-family: 'Griffy', cursive;
     font-size: 3rm;
+}
+
+.bg-blue{
+    background-color: rgb(9,18,32);
 }
