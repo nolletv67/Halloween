@@ -1,11 +1,30 @@
+{% extends 'layout.html.twig' %}
 
+{% block title %}Se connecter{% endblock %}
 
 
 {% block content %}
 
-<form method="post">
-    <input type="text" class="form-control" name="pseudo" id="pseudo" placeholder="pseudo"/>
-    <input type="submit" id="login" name="login" value="login"/>
-</form>
+<div class="container p-0">
+
+    <header class="carousel slide" data-ride="carousel">
+        <div class="carousel-item active d-block justify-content-center">
+            <img src="../assets/images/index_background.jpg" alt="Atelier de fleuriste" class="image_header">
+        </div>
+    </header>
+
+    <form method="post" class="row m-0 p-0 text-center d-inline">
+        <div class="offset-2 col-8 d-block">
+            <input type="text" class="form-control" name="pseudo" id="pseudo" placeholder="pseudo" style="margin-top: 120%;"/>
+
+            <input type="submit" class="btn btn-orange m-4" id="login" name="login" value="login"/>
+        </div>
+    </form>
+
+
+</div>
+
+
+
 
 {% endblock %}
