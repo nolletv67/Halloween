@@ -12,27 +12,73 @@ namespace Model;
 class Bonbon
 {
     private $id;
-    private $title;
+    private $name;
 
-    public function getId(): int
+    /**
+     * @return mixed
+     */
+    public function getId()
     {
         return $this->id;
     }
 
-    public function setId($id): Bonbon
+    /**
+     * @param mixed $id
+     */
+    public function setId($id): void
     {
         $this->id = $id;
-        return $this;
     }
 
-    public function getTitle(): string
+    /**
+     * @return mixed
+     */
+    public function getName()
     {
-        return $this->title;
+        return $this->name;
     }
 
-    public function setTitle($title):Bonbon
+    /**
+     * @param mixed $name
+     */
+    public function setName($name): void
     {
-        $this->title = $title;
-        return $this;
+        $this->name = $name;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getMarque()
+    {
+        return $this->marque;
+    }
+
+    /**
+     * @param mixed $marque
+     */
+    public function setMarque($marque): void
+    {
+        $this->marque = $marque;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCodeBarre()
+    {
+        return $this->codeBarre;
+    }
+
+    /**
+     * @param mixed $codeBarre
+     */
+    public function setCodeBarre($codeBarre): void
+    {
+        $this->codeBarre = $codeBarre;
+    }
+    private $marque;
+    private $codeBarre;
+
+
 }
