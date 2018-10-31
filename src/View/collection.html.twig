@@ -4,15 +4,62 @@
 
 {% block content %}
 
-<ul>
-    {% for collection in collections %}
-    <li>{{ collection.quantity }} {{ collection.bonbonName }}(s)</li>
-    {% endfor %}
-</ul>
+<div class="container-fluid p-0">
+    <header class="carousel slide" data-ride="carousel">
+        <div class="carousel-item active d-block justify-content-center">
+            <img src="../assets/images/collection_background.jpg" alt="Atelier de fleuriste" class="image_header collection">
+        </div>
+    </header>
+</div>
+<div class="container">
+<div class="position-relative m-0">
+    <h1 class="collection">Ta collection</h1>
+    <div class="row justify-content-around align-items-center mb-4">
+        <div class="col text-center">
+            {% if totalQuantity.quantity > 100 %}
+                <img class="badges" src="../assets/images/Quantite_or.png">
+            {% elseif totalQuantity.quantity > 25 %}
+                <img class="badges" src="../assets/images/Quantite_argent.png">
+            {% elseif totalQuantity.quantity > 1 %}
+                <img class="badges" src="../assets/images/Quantite_bronze.png">
+            {% else %}
+                <img class="badges" src="../assets/images/Quantite_noir.png">
+            {% endif %}
+        </div>
+        <div class="col text-center">
+            {% if sortesBonbons > 20 %}
+                <img class="badges" src="../assets/images/Diversite_or.png">
+            {% elseif sortesBonbons > 10 %}
+                <img class="badges" src="../assets/images/Diversite_argent.png">
+            {% elseif sortesBonbons > 5 %}
+                <img class="badges" src="../assets/images/Diversite_bronze.png">
+            {% else %}
+                <img class="badges" src="../assets/images/Diversite_noir.png">
+            {% endif %}
+        </div>
+        <div class="col text-center">
+            {% if totalPoints.points > 1500 %}
+                <img class="badges" src="../assets/images/Ratete_or.png">
+            {% elseif totalPoints.points > 1000 %}
+                <img class="badges" src="../assets/images/Rarete_argent.png">
+            {% elseif totalQuantity.quantity > 500 %}
+                <img class="badges" src="../assets/images/Rarete_bronze.png">
+            {% else %}
+                <img class="badges" src="../assets/images/Rarete_noir.png">
+            {% endif %}
+        </div>
+    </div>
+    <p class="mb-0">Tu as <span>{{ totalPoints.points }}</span> points</p>
+    <p class="mb-5">Tu as récolté <span>{{ totalQuantity.quantity }}</span> bonbons !</p>
+    <ul>
+        {% for collection in collections %}
+            <li class="collection"><span>{{ collection.quantity }}</span> {{ collection.bonbonName }}(s)</li>
+        {% endfor %}
+    </ul>
+</div>
+</div>
 
-    <p>Super ton nombre de points est {{ totalPoints.points }}!! </p>
 
-    <p>Bravo tu as récolté {{ totalQuantity.quantity }} bonbons!</p>
 
 <nav class="navbar bg-blue fixed-bottom">
     <ul class="nav nav-pills m-auto justify-content-around">
@@ -30,6 +77,5 @@
         </li>
     </ul>
 </nav>
-<h3>Ma collection.</h3>
 
 {% endblock %}
