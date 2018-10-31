@@ -83,8 +83,10 @@ class JoueurController extends AbstractController
 
         $totalQuantity = $collectionsManager ->quantityTot($_SESSION['pseudo']);
 
+        $sortesBonbons = count($collections);
 
-        return $this->twig->render('collection.html.twig', ['collections' => $collections, 'totalQuantity' => $totalQuantity, 'totalPoints' => $totalPoints, 'session' => $_SESSION]);
+
+        return $this->twig->render('collection.html.twig', ['sortesBonbons' => $sortesBonbons, 'collections' => $collections, 'totalQuantity' => $totalQuantity, 'totalPoints' => $totalPoints, 'session' => $_SESSION]);
     }
 
     public function ranking()

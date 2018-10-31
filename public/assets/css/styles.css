@@ -9,6 +9,17 @@ h1{
     text-shadow: 0 0 50px rgb(9,18,32);
 }
 
+p{
+    font-family: 'Griffy', cursive;
+    text-align: center;
+    font-size:7vw;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: darkorange;
+    text-shadow: 0 0 50px rgb(9,18,32);
+    line-height: 1.2;
+}
+
 a{
     color: white;
 }
@@ -48,7 +59,6 @@ span{
     text-align: center;
     font-size:10vw;
     padding-top: 140px;
-    padding-right: 30px;
     color: white;
     -webkit-text-stroke: 1px;
     -webkit-text-stroke-color: darkorange;
@@ -66,6 +76,45 @@ li.text{
     list-style-type: none;
     margin: 0px;
     line-height: 1.2;
+}
+
+li.collection{
+    font-family: 'Griffy', cursive;
+    font-size:7vw;
+    /*padding-left: 30px;*/
+    /*padding-right: 30px;*/
+    color: darkorange;
+    text-shadow: 0 0 40px rgb(9,18,32);
+    list-style-type: none;
+    margin: 0px;
+    line-height: 1;
+}
+
+li.collection span{
+    font-family: 'Griffy', cursive;
+    text-align: center;
+    font-size:8vw;
+    padding-top: 140px;
+    color: white;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: darkorange;
+    text-shadow: 0 0 50px rgb(9,18,32);
+}
+
+h1.collection{
+    font-family: 'Griffy', cursive;
+    text-align: center;
+    font-size:13vw;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: darkorange;
+    text-shadow: 0 0 15px rgb(9,18,32);
+}
+
+img.badges{
+    width: 80px;
 }
 
 .btn-map1{

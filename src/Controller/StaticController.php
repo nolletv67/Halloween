@@ -26,9 +26,6 @@ class StaticController extends AbstractController
 
            $_SESSION['pseudo'] = $_POST['pseudo'];
 
-           echo $_POST['pseudo'];
-
-
            header('Location: /map/');
        }
 
