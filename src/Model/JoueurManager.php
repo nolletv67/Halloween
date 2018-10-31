@@ -49,25 +49,33 @@ class JoueurManager extends AbstractManager
         $statement->execute();
         return $statement->fetch();
 
-       //return $this->pdo->query("SELECT SUM(points) FROM " .self::TABLE . " WHERE pseudo = " . $pseudo, \PDO::FETCH_UNIQUE)->fetch();
-
     }
 
-
-
-
-    public function update($category) //requête SQL d'insertion pour éditer.
+    public function quantityTot($pseudo)
     {
-        $statement = $this->pdo->prepare("UPDATE " . self::TABLE ." SET category.`name` = :name WHERE category.`id` = :id"); //UPDATE ... SET = syntaxe SQL pour éditer
-        $statement->bindValue('name', $category->getName(), \PDO::PARAM_STR); //On associe la nouvelle valeur au paramètre
-        $statement->bindValue('id', $category->getId(), \PDO::PARAM_INT); //On associe la nouvelle valeur au paramètre
-        return $statement->execute();
+        $statement = $this->pdo->prepare("SELECT SUM(quantity) as quantity FROM " .self::TABLE . " WHERE pseudo = :pseudo");
+        $statement->setFetchMode(\PDO::FETCH_UNIQUE);
+        $statement->bindValue('pseudo',$pseudo);
+        $statement->execute();
+        return $statement->fetch();
     }
 
-    public function delete($category) //requête SQL pour supprimer.
+    public function classementPoints()
     {
-        $statement = $this->pdo->prepare("DELETE FROM " . self::TABLE . " WHERE `id` = :id ");
-        $statement->bindValue('id', $category->getId(), \PDO::PARAM_INT);
-        return $statement->execute();
+        $statement = $this->pdo->prepare("SELECT pseudo, SUM(points) as pointsTot FROM " .self::TABLE . " GROUP BY pseudo ORDER BY pointsTot DESC");
+        $statement->setFetchMode(\PDO::FETCH_BOTH);
+        $statement->execute();
+        return $statement->fetchAll();
     }
+
+    public function classementQuantity()
+    {
+        $statement = $this->pdo->prepare("SELECT pseudo, SUM(quantity) as quantityTot FROM " .self::TABLE . " GROUP BY pseudo ORDER BY quantityTot DESC");
+        $statement->setFetchMode(\PDO::FETCH_BOTH);
+        $statement->execute();
+        return $statement->fetchAll();
+    }
+
+
+
 }
