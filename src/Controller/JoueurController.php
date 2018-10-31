@@ -40,6 +40,8 @@ class JoueurController extends AbstractController
         $manche1 ->setBonbonName($name1['name']);
         $manche1 ->setQuantity($random1);
         $manche1 ->setPoints(100);
+        $manche1 ->setCodeBarre($name1['codeBarre']);
+
 
 
         $manche2 = new Model\Joueur();
@@ -48,6 +50,8 @@ class JoueurController extends AbstractController
         $manche2 ->setBonbonName($name2['name']);
         $manche2 ->setQuantity($random2);
         $manche2 ->setPoints(25);
+        $manche2 ->setCodeBarre($name2['codeBarre']);
+
 
         $manche3 = new Model\Joueur();
 
@@ -55,6 +59,7 @@ class JoueurController extends AbstractController
         $manche3 ->setBonbonName($name3['name']);
         $manche3 ->setQuantity($random3);
         $manche3 ->setPoints(5);
+        $manche3 ->setCodeBarre($name3['codeBarre']);
 
 
         $manager = new Model\JoueurManager($this->pdo);

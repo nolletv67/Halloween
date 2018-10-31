@@ -21,11 +21,12 @@ class JoueurManager extends AbstractManager
 
     public function insert($manche)
     {
-        $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " VALUES (null, :pseudo, :bonbonName, :quantity, :points)");
+        $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " VALUES (null, :pseudo, :bonbonName, :quantity, :points, :codeBarre)");
         $statement->bindValue('pseudo',$manche ->getPseudo(), \PDO::PARAM_STR);
         $statement->bindValue('bonbonName',$manche ->getbonbonName(), \PDO::PARAM_STR);
         $statement->bindValue('quantity',$manche ->getQuantity());
         $statement->bindValue('points',$manche ->getPoints());
+        $statement->bindValue('codeBarre', $manche ->getCodeBarre());
 
         $statement->execute();
         return $statement;
