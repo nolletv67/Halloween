@@ -1,0 +1,610 @@
+{
+  "type": "umap",
+  "properties": {
+    "easing": true,
+    "embedControl": true,
+    "fullscreenControl": true,
+    "searchControl": true,
+    "datalayersControl": true,
+    "zoomControl": true,
+    "slideshow": {},
+    "captionBar": false,
+    "limitBounds": {},
+    "tilelayer": {},
+    "licence": "",
+    "description": "Secret : Kinder suprise",
+    "name": "Halloween WCS",
+    "displayPopupFooter": false,
+    "miniMap": false,
+    "moreControl": true,
+    "scaleControl": true,
+    "scrollWheelZoom": true,
+    "zoom": 18
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      7.467194795608521,
+      48.41460081471948
+    ]
+  },
+  "layers": [
+    {
+      "type": "FeatureCollection",
+      "features": [
+        {
+          "type": "Feature",
+          "properties": {
+            "_umap_options": {
+              "iconClass": "Ball",
+              "color": "OrangeRed"
+            }
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              7.466465,
+              48.414658
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "_umap_options": {
+              "iconClass": "Ball",
+              "color": "OrangeRed"
+            }
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              7.466465,
+              48.414658
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "_umap_options": {
+              "iconClass": "Ball",
+              "color": "OrangeRed",
+              "popupShape": "Large",
+              "showLabel": null,
+              "labelDirection": "right"
+            },
+            "name": "0% de chance d'obtenir 1 bonbon  rare"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              7.466465,
+              48.414658
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "_umap_options": {
+              "color": "OrangeRed",
+              "iconClass": "Ball",
+              "popupShape": "Large",
+              "showLabel": null,
+              "labelDirection": "right"
+            },
+            "name": "10% de chance d'obtenir 1 bonbon rare"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              7.4661,
+              48.41496
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "_umap_options": {
+              "color": "OrangeRed",
+              "iconClass": "Ball",
+              "popupShape": "Large",
+              "showLabel": null,
+              "labelDirection": "right"
+            },
+            "name": "10% de chance d'obtenir 1 bonbon rare"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              7.465392,
+              48.41527
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "_umap_options": {
+              "color": "OrangeRed",
+              "iconClass": "Ball",
+              "popupShape": "Large",
+              "showLabel": null,
+              "labelDirection": "right"
+            },
+            "name": "6% de chance d'obtenir 5 bonbons rares"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              7.466894,
+              48.414547
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "_umap_options": {
+              "iconClass": "Ball",
+              "popupShape": "Large",
+              "showLabel": null,
+              "labelDirection": "right"
+            },
+            "name": "33% de chance d'obtenir 3 bonbons rares et 6% 1 très rare"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              7.464867,
+              48.41453
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "_umap_options": {
+              "iconClass": "Ball",
+              "popupShape": "Large",
+              "showLabel": null
+            },
+            "name": "33% de chance d'obtenir 3 bonbons rares et 10% 1 très rare"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              7.466905,
+              48.414206
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "_umap_options": {
+              "iconClass": "Ball",
+              "color": "OrangeRed",
+              "popupShape": "Large",
+              "showLabel": null,
+              "labelDirection": "right"
+            },
+            "description": "",
+            "name": "20% de chance d'obtenir 3 bonbons rares"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              7.465274,
+              48.414277
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "_umap_options": {
+              "color": "OrangeRed",
+              "iconClass": "Ball",
+              "popupShape": "Large",
+              "showLabel": null,
+              "labelDirection": "right"
+            },
+            "name": "20% de chance d'obtenir 1 bonbon rare"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              7.466417,
+              48.415398
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "_umap_options": {
+              "color": "OrangeRed",
+              "iconClass": "Ball",
+              "popupShape": "Large",
+              "showLabel": null
+            },
+            "name": "25% de chance d'obtenir 4 bonbons rares"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              7.467071,
+              48.413981
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "_umap_options": {
+              "iconClass": "Ball",
+              "popupShape": "Large",
+              "showLabel": null,
+              "labelDirection": "right"
+            },
+            "name": "20% de chance d'obtenir 2 bonbons rares et 6% 1 très rare"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              7.466197,
+              48.414701
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "_umap_options": {
+              "iconClass": "Ball",
+              "color": "OrangeRed",
+              "popupShape": "Large",
+              "showLabel": null,
+              "labelDirection": "right"
+            },
+            "name": "33% de chance d'obtenir 2 bonbons rares"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              7.465687,
+              48.414996
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "_umap_options": {
+              "color": "OrangeRed",
+              "iconClass": "Ball",
+              "popupShape": "Large",
+              "showLabel": null,
+              "labelDirection": "right"
+            },
+            "name": "15% de chances d'obtenir 2 bonbons rares"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              7.464716,
+              48.4149
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "_umap_options": {
+              "color": "OrangeRed",
+              "iconClass": "Ball",
+              "popupShape": "Large",
+              "showLabel": null
+            },
+            "name": "13% de chance d'obtenir 3 bonbons rares"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              7.467179,
+              48.414202
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "_umap_options": {
+              "iconClass": "Ball",
+              "popupShape": "Large",
+              "showLabel": null,
+              "labelDirection": "right"
+            },
+            "name": "33% d'obtenir 3 bonbons rares et 6 % 1 très rare"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              7.467458,
+              48.413967
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "_umap_options": {
+              "color": "OrangeRed",
+              "iconClass": "Ball",
+              "popupShape": "Large",
+              "showLabel": null,
+              "labelDirection": "right"
+            },
+            "name": "0% de chance d'obtenir 1 bonbon rare"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              7.465451,
+              48.414978
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "_umap_options": {
+              "iconClass": "Ball",
+              "popupShape": "Large",
+              "showLabel": null,
+              "labelDirection": "right"
+            },
+            "name": "50% de chance d'obtenir 2 bonbons rares et 4% 1 très rare"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              7.464781,
+              48.41516
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "_umap_options": {
+              "iconClass": "Ball",
+              "popupShape": "Large",
+              "showLabel": null,
+              "labelDirection": "right"
+            },
+            "name": "12% de chance d'obtenir 4 bonbons rares et 6% 1 très rare"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              7.465988,
+              48.415395
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "_umap_options": {
+              "iconClass": "Ball",
+              "color": "Yellow",
+              "popupShape": "Large",
+              "showLabel": null,
+              "labelDirection": "right",
+              "labelInteractive": false,
+              "popupTemplate": "Default",
+              "zoomTo": 13
+            },
+            "name": "25% de chance d'obtenir 4 bonbons rares et 5 % 1 très rare",
+            "description": ""
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              7.467125,
+              48.413746
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "_umap_options": {
+              "iconClass": "Ball",
+              "popupShape": "Large",
+              "showLabel": null,
+              "labelDirection": "right"
+            },
+            "name": "20% de chance d'obtenir 4 bonbons rares et 10% 1 très rare"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              7.467018,
+              48.414352
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "_umap_options": {
+              "iconClass": "Ball",
+              "color": "OrangeRed",
+              "popupShape": "Large",
+              "showLabel": null,
+              "labelDirection": "right"
+            },
+            "name": "15% de chance d'obtenir 1 bonbon rare"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              7.464518,
+              48.414754
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "_umap_options": {
+              "color": "OrangeRed",
+              "iconClass": "Ball",
+              "popupShape": "Large",
+              "showLabel": null,
+              "labelDirection": "right"
+            },
+            "name": "33% de chance d'obtenir 4 bonbons rares"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              7.464609,
+              48.415146
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "_umap_options": {
+              "color": "OrangeRed",
+              "iconClass": "Ball",
+              "popupShape": "Large",
+              "showLabel": null,
+              "labelDirection": "right"
+            },
+            "name": "25% de chance d'obtenir 4 bonbons rares"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              7.465913,
+              48.41469
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "_umap_options": {
+              "color": "OrangeRed",
+              "iconClass": "Ball",
+              "popupShape": "Panel",
+              "showLabel": null,
+              "labelDirection": "right"
+            },
+            "name": "25% de chance d'obtenir 4 bonbons rares"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              7.46572,
+              48.415306
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "_umap_options": {
+              "color": "OrangeRed",
+              "iconClass": "Ball",
+              "popupShape": "Large",
+              "showLabel": null,
+              "labelDirection": "right"
+            },
+            "name": "50% de chance d'obtenir 2 bonbons rares"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              7.466374,
+              48.414989
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "_umap_options": {
+              "iconClass": "Ball",
+              "color": "OrangeRed",
+              "popupShape": "Large",
+              "showLabel": null,
+              "labelDirection": "right"
+            },
+            "name": "13% de chance d'obtenir 4 bonbons rares"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              7.465333,
+              48.414651
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "_umap_options": {
+              "color": "OrangeRed",
+              "iconClass": "Ball",
+              "popupShape": "Large",
+              "showLabel": null,
+              "labelDirection": "right"
+            },
+            "name": "25% de chance d'obtenir 2 bonbons rares"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              7.465231,
+              48.414487
+            ]
+          }
+        },
+        {
+          "type": "Feature",
+          "properties": {
+            "_umap_options": {
+              "iconClass": "Ball",
+              "popupShape": "Large",
+              "showLabel": null,
+              "labelDirection": "right"
+            },
+            "name": "6% de chance d'obtenir 5 bonbons rares et 1 très rare"
+          },
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              7.465199,
+              48.414928
+            ]
+          }
+        }
+      ],
+      "_umap_options": {
+        "displayOnLoad": true,
+        "browsable": true,
+        "name": "Calque 1",
+        "id": 672984
+      }
+    }
+  ]
+}
