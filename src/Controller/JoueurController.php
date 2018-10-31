@@ -38,7 +38,7 @@ class JoueurController extends AbstractController
         $manche1 ->setPseudo($_SESSION['pseudo']);
         $manche1 ->setBonbonName($name1['name']);
         $manche1 ->setQuantity($random1);
-        $manche1 ->setPoints(100);
+        $manche1 ->setPoints($random1 * 100);
         $manche1 ->setCodeBarre($name1['codeBarre']);
 
 
@@ -48,7 +48,7 @@ class JoueurController extends AbstractController
         $manche2 ->setPseudo($_SESSION['pseudo']);
         $manche2 ->setBonbonName($name2['name']);
         $manche2 ->setQuantity($random2);
-        $manche2 ->setPoints(25);
+        $manche2 ->setPoints($random2 * 25);
         $manche2 ->setCodeBarre($name2['codeBarre']);
 
 
@@ -57,7 +57,7 @@ class JoueurController extends AbstractController
         $manche3 ->setPseudo($_SESSION['pseudo']);
         $manche3 ->setBonbonName($name3['name']);
         $manche3 ->setQuantity($random3);
-        $manche3 ->setPoints(5);
+        $manche3 ->setPoints($random3 * 5);
         $manche3 ->setCodeBarre($name3['codeBarre']);
 
 
@@ -77,10 +77,23 @@ class JoueurController extends AbstractController
         session_start();
 
         $collectionsManager = new Model\JoueurManager($this->pdo);
-        $collections = $collectionsManager ->select("Boby");
+        $collections = $collectionsManager ->select($_SESSION['pseudo']);
 
-        $totalPoints = $collectionsManager ->points("Boby");
+        $totalPoints = $collectionsManager ->points($_SESSION['pseudo']);
 
-        return $this->twig->render('collection.html.twig', ['collections' => $collections, 'totalPoints' => $totalPoints, 'session' => $_SESSION]);
+        $totalQuantity = $collectionsManager ->quantityTot($_SESSION['pseudo']);
+
+
+        return $this->twig->render('collection.html.twig', ['collections' => $collections, 'totalQuantity' => $totalQuantity, 'totalPoints' => $totalPoints, 'session' => $_SESSION]);
+    }
+
+    public function ranking()
+    {
+        $rankingManager = new Model\JoueurManager($this->pdo);
+        $rankingPoints = $rankingManager ->classementPoints();
+
+        $rankingQuantities = $rankingManager ->classementQuantity();
+
+        return $this->twig->render('ranking.html.twig', ['rankingPoints' => $rankingPoints, 'rankingQuantities' => $rankingQuantities]);
     }
 }

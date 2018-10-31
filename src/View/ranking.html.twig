@@ -4,6 +4,54 @@
 
 {% block content %}
 
+    <h2>Classement par points</h2>
+
+<div>
+    <table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Rang</th>
+        <th scope="col">Pseudo</th>
+        <th scope="col">Nombre de points</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% set rang = 0 %}
+{% for rankingPoint in rankingPoints %}
+<tr>
+    <th scope="row">{% set myRang = myRang + 1 %} {{ myRang }}</th>
+    <td>{{ rankingPoint.pseudo }}</td>
+    <td>{{ rankingPoint.pointsTot }}</td>
+</tr>
+{% endfor %}
+    </tbody>
+    </table>
+</div>
+
+    <h2>Classement par quantité</h2>
+
+    <div>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Rang</th>
+        <th scope="col">Pseudo</th>
+        <th scope="col">Nombre de Bonbons</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% set rang = 0 %}
+    {% for rankingQuantity in rankingQuantities %}
+        <tr>
+            <th scope="row">{% set myRang = myRang + 1 %} {{ myRang }}</th>
+            <td>{{ rankingQuantity.pseudo }}</td>
+            <td>{{ rankingQuantity.quantityTot }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+    </div>
+
 <nav class="navbar bg-blue fixed-bottom">
     <ul class="nav nav-pills m-auto justify-content-around">
         <li class="nav-item active col">
@@ -20,5 +68,6 @@
         </li>
     </ul>
 </nav>
+
 
 {% endblock %}
