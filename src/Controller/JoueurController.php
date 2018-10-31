@@ -33,7 +33,6 @@ class JoueurController extends AbstractController
         $bonbonManager3 = new Model\BonbonManager($this->pdo);
         $name3 = $bonbonManager3->random();
 
-
         $manche1 = new Model\Joueur();
 
         $manche1 ->setPseudo($_SESSION['pseudo']);

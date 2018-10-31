@@ -9,6 +9,9 @@ h1{
     text-shadow: 0 0 50px rgb(9,18,32);
 }
 
+a{
+    color: white;
+}
 
 .image_header{
     padding-left: 0px;
@@ -34,4 +37,33 @@ h1{
 .form-control{
     font-family: 'Griffy', cursive;
     font-size: 3rm;
+}
+
+.bg-blue{
+    background-color: rgb(9,18,32);
+}
+
+span{
+    font-family: 'Griffy', cursive;
+    text-align: center;
+    font-size:10vw;
+    padding-top: 140px;
+    padding-right: 30px;
+    color: white;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: darkorange;
+    text-shadow: 0 0 50px rgb(9,18,32);
+}
+
+li.text{
+    font-family: 'Griffy', cursive;
+    text-align: center;
+    font-size:8vw;
+    /*padding-left: 30px;*/
+    /*padding-right: 30px;*/
+    color: darkorange;
+    text-shadow: 0 0 40px rgb(9,18,32);
+    list-style-type: none;
+    margin: 0px;
+    line-height: 1.2;
 }
