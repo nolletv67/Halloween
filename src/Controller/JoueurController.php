@@ -72,4 +72,16 @@ class JoueurController extends AbstractController
 
         return $this->twig->render('gain.html.twig', ['name1' => $name1, 'name2' => $name2, 'name3'=> $name3, 'random1' => $random1, 'random2' => $random2, 'random3' => $random3, 'session' => $_SESSION]);
     }
+
+    public function Collection()
+    {
+        session_start();
+
+        $collectionsManager = new Model\JoueurManager($this->pdo);
+        $collections = $collectionsManager ->select("Boby");
+
+        $totalPoints = $collectionsManager ->points("Boby");
+
+        return $this->twig->render('collection.html.twig', ['collections' => $collections, 'totalPoints' => $totalPoints, 'session' => $_SESSION]);
+    }
 }
