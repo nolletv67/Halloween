@@ -17,6 +17,7 @@ abstract class AbstractController
     protected $twig;
     protected $pdo;
 
+
     public function __construct()
     {
         // instanciation de Twig

@@ -3,7 +3,13 @@
 {% block title %}Halloween à Gertwiller{% endblock %}
 
 {% block content %}
+<h3>Ma collection.</h3>
+<ul>
+    {% for collection in collections %}
+    <li>{{ collection.quantity }} {{ collection.bonbonName }}(s)</li>
+    {% endfor %}
+</ul>
 
-
+    <p>ton nombre de points est {{ totalPoints.points }} </p>
 
 {% endblock %}
