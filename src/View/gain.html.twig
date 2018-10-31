@@ -2,18 +2,36 @@
 
 {% block content %}
 
-<p>{{ session.pseudo  }} tu as récolté</p>
-    <ul>
+<div class="container-fluid p-0">
+<header class="carousel slide" data-ride="carousel">
+    <div class="carousel-item active d-block justify-content-center">
+        <img src="../assets/images/index_background.jpg" alt="Atelier de fleuriste" class="image_header">
+    </div>
+</header>
+<h1 class="position-relative mt-5">{{ session.pseudo }}, tu as récolté</h1>
 
-        <li>{{ random1 }} {{ name1.name }}</li>
+<div class="position-relative text-center mt-4">
+    <li class="text"><span>{{ random1 }}</span>{{ name1.name }}</li>
+    <li class="text"><span>{{ random2 }}</span>{{ name2.name }}</li>
+    <li class="text"><span>{{ random3 }}</span>{{ name3.name }}</li>
+</div>
 
-        <li>{{ random2 }} {{ name2.name }}</li>
-
-
-        <li>{{ random3 }} {{ name3.name }}</li>
-
-
+<nav class="navbar bg-blue fixed-bottom">
+    <ul class="nav nav-pills m-auto justify-content-around">
+        <li class="nav-item active col">
+            <a href="/collection/" class="nav-link"><i class="fas fa-user-alt"></i></a>
+        </li>
+        <li class="nav-item col">
+            <a href="/map/" class="nav-link"><i class="far fa-map"></i></a>
+        </li>
+        <li class="nav-item col">
+            <a href="/ranking/" class="nav-link"><i class="fas fa-list-ol"></i></a>
+        </li>
+        <li class="nav-item col">
+            <a href="/login/" class="nav-link"><i class="fas fa-sign-out-alt"></i></a>
+        </li>
     </ul>
+</nav>
 
 
 {% endblock %}
