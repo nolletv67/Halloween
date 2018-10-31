@@ -3,7 +3,7 @@
 $routes = [
     'Static' => [ // Controller
         ['index', '/', 'GET'], // action, url, HTTP method
-        ['login', '/login/', 'GET'], // action, url, HTTP method
+        ['login', '/login/', ['GET', 'POST']], // action, url, HTTP method
     ],
     'Joueur' => [ // Controller
         ['map', '/map/', ['GET', 'POST']],

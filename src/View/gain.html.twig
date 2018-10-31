@@ -2,19 +2,18 @@
 
 {% block content %}
 
-<p>Tu as récolté</p>
+<p>{{ session.pseudo  }} tu as récolté</p>
     <ul>
 
-        <li>{{ randomTresRare }} {{ name1.name }}</li>
+        <li>{{ random1 }} {{ name1.name }}</li>
 
-        <li>{{ randomRare }} {{ name2.name }}</li>
+        <li>{{ random2 }} {{ name2.name }}</li>
 
 
-        <li>{{ randomCommun }} {{ name3.name }}</li>
+        <li>{{ random3 }} {{ name3.name }}</li>
 
 
     </ul>
-
 
 
 {% endblock %}

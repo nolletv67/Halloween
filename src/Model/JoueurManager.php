@@ -19,14 +19,18 @@ class JoueurManager extends AbstractManager
         parent::__construct(self::TABLE, $pdo);
     }
 
-    public function insert($category): int
+    public function insert($manche)
     {
-        $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " (`name`) VALUES (:name)");
-        $statement->bindValue('name', $category->getName(), \PDO::PARAM_STR);
-        if ($statement->execute()) {
-            return $this->pdo->lastInsertId();
-        }
+        $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " VALUES (null, :pseudo, :bonbonName, :quantity, :points)");
+        $statement->bindValue('pseudo',$manche ->getPseudo(), \PDO::PARAM_STR);
+        $statement->bindValue('bonbonName',$manche ->getbonbonName(), \PDO::PARAM_STR);
+        $statement->bindValue('quantity',$manche ->getQuantity());
+        $statement->bindValue('points',$manche ->getPoints());
+
+        $statement->execute();
+        return $statement;
     }
+
 
 
 
