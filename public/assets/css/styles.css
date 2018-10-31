@@ -116,3 +116,29 @@ h1.collection{
 img.badges{
     width: 80px;
 }
+
+.btn-map1{
+    position: absolute;
+    top: 47%;
+    right: 60%;
+    opacity: 0.1;
+}
+
+.btn-map2{
+    position: absolute;
+    top: 20%;
+    right: 30%;
+    opacity: 0.1;
+}
+.btn-map3{
+    position: absolute;
+    top: 45%;
+    right: 15%;
+    opacity: 0.1;
+}
+.btn-map4{
+    position: absolute;
+    top: 70%;
+    right: 10%;
+    opacity: 0.1;
+}
