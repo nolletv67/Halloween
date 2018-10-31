@@ -8,7 +8,7 @@
         <img src="../assets/images/index_background.jpg" alt="Atelier de fleuriste" class="image_header">
     </div>
 </header>
-<h1 class="position-relative mt-5">Tu as récolté</h1>
+<h1 class="position-relative mt-5">{{ session.pseudo }}, tu as récolté</h1>
 
 <div class="position-relative text-center mt-4">
     <li class="text"><span>{{ random1 }}</span>{{ name1.name }}</li>
@@ -32,7 +32,6 @@
         </li>
     </ul>
 </nav>
-
 
 
 {% endblock %}

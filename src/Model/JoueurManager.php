@@ -19,21 +19,39 @@ class JoueurManager extends AbstractManager
         parent::__construct(self::TABLE, $pdo);
     }
 
-    public function insert($category): int
+    public function insert($manche)
     {
-        $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " (`name`) VALUES (:name)");
-        $statement->bindValue('name', $category->getName(), \PDO::PARAM_STR);
-        if ($statement->execute()) {
-            return $this->pdo->lastInsertId();
-        }
+        $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " VALUES (null, :pseudo, :bonbonName, :quantity, :points, :codeBarre)");
+        $statement->bindValue('pseudo',$manche ->getPseudo(), \PDO::PARAM_STR);
+        $statement->bindValue('bonbonName',$manche ->getbonbonName(), \PDO::PARAM_STR);
+        $statement->bindValue('quantity',$manche ->getQuantity());
+        $statement->bindValue('points',$manche ->getPoints());
+        $statement->bindValue('codeBarre', $manche ->getCodeBarre());
+
+        $statement->execute();
+        return $statement;
     }
 
+    public function select($pseudo)
+    {
+        $statement = $this->pdo->prepare("SELECT pseudo, bonbonName, SUM(quantity) as quantity, SUM(points) FROM " .self::TABLE . " WHERE pseudo = :pseudo GROUP BY bonbonName ORDER BY quantity DESC");
+        $statement->setFetchMode(\PDO::FETCH_CLASS, $this->className);
+        $statement->bindValue('pseudo',$pseudo);
+        $statement->execute();
+        return $statement->fetchAll();
 
+    }
+    public function points($pseudo)
+    {
+        $statement = $this->pdo->prepare("SELECT SUM(points) as points FROM " .self::TABLE . " WHERE pseudo = :pseudo");
+        $statement->setFetchMode(\PDO::FETCH_UNIQUE);
+        $statement->bindValue('pseudo',$pseudo);
+        $statement->execute();
+        return $statement->fetch();
 
+       //return $this->pdo->query("SELECT SUM(points) FROM " .self::TABLE . " WHERE pseudo = " . $pseudo, \PDO::FETCH_UNIQUE)->fetch();
 
-
-
-
+    }
 
 
 
@@ -48,7 +66,7 @@ class JoueurManager extends AbstractManager
 
     public function delete($category) //requête SQL pour supprimer.
     {
-        $statement = $this->pdo->prepare("DELETE FROM " . self::TABLE . " WHERE `id` = :id");
+        $statement = $this->pdo->prepare("DELETE FROM " . self::TABLE . " WHERE `id` = :id ");
         $statement->bindValue('id', $category->getId(), \PDO::PARAM_INT);
         return $statement->execute();
     }

@@ -96,5 +96,21 @@ class Joueur
     private $bonbonName;
     private $quantity;
     private $points;
+    private $codeBarre;
 
+    /**
+     * @return mixed
+     */
+    public function getCodeBarre()
+    {
+        return $this->codeBarre;
+    }
+
+    /**
+     * @param mixed $codeBarre
+     */
+    public function setCodeBarre($codeBarre): void
+    {
+        $this->codeBarre = $codeBarre;
+    }
 }

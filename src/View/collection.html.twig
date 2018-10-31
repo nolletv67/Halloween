@@ -4,6 +4,14 @@
 
 {% block content %}
 
+<ul>
+    {% for collection in collections %}
+    <li>{{ collection.quantity }} {{ collection.bonbonName }}(s)</li>
+    {% endfor %}
+</ul>
+
+    <p>ton nombre de points est {{ totalPoints.points }} </p>
+
 <nav class="navbar bg-blue fixed-bottom">
     <ul class="nav nav-pills m-auto justify-content-around">
         <li class="nav-item active col">
@@ -20,5 +28,6 @@
         </li>
     </ul>
 </nav>
+<h3>Ma collection.</h3>
 
 {% endblock %}
