@@ -23,7 +23,7 @@
             {% elseif totalQuantity.quantity > 1 %}
                 <img class="badges" src="../assets/images/Quantite_bronze.png">
             {% else %}
-                <img class="badges" src="../assets/images/Quantite_noir.png">
+                <img class="badges" src="../assets/images/Quantite_noir.png" style="border: 2px; border-color: white;">
             {% endif %}
         </div>
         <div class="col text-center">
@@ -49,13 +49,17 @@
             {% endif %}
         </div>
     </div>
-    <p class="mb-0">Tu as <span>{{ totalPoints.points }}</span> points</p>
-    <p class="mb-5">Tu as récolté <span>{{ totalQuantity.quantity }}</span> bonbons !</p>
-    <ul>
-        {% for collection in collections %}
-            <li class="collection"><span>{{ collection.quantity }}</span> {{ collection.bonbonName }}(s)</li>
-        {% endfor %}
-    </ul>
+    {% if totalPoints.points < 1 %}
+        <p class="p-4">Tu n'as pas encore commencé ta récolte !</p>
+    {% else %}
+        <p class="mb-0">Tu as <span>{{ totalPoints.points }}</span> points</p>
+        <p class="mb-5">Tu as récolté <span>{{ totalQuantity.quantity }}</span> bonbons !</p>
+        <ul>
+            {% for collection in collections %}
+                <li class="collection"><span>{{ collection.quantity }}</span> {{ collection.bonbonName }}(s)</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
 </div>
 </div>
 
