@@ -4,53 +4,60 @@
 
 {% block content %}
 
-    <h2>Classement par points</h2>
 
-<div>
-    <table class="table">
-    <thead>
-    <tr>
-        <th scope="col">Rang</th>
-        <th scope="col">Pseudo</th>
-        <th scope="col">Nombre de points</th>
-    </tr>
-    </thead>
-    <tbody>
-    {% set rang = 0 %}
-{% for rankingPoint in rankingPoints %}
-<tr>
-    <th scope="row">{% set myRang = myRang + 1 %} {{ myRang }}</th>
-    <td>{{ rankingPoint.pseudo }}</td>
-    <td>{{ rankingPoint.pointsTot }}</td>
-</tr>
-{% endfor %}
-    </tbody>
+<div class="container-fluid p-0">
+    <header class="carousel slide" data-ride="carousel">
+        <div class="carousel-item active d-block justify-content-center">
+            <img src="../assets/images/collection_background.jpg" alt="Atelier de fleuriste" class="image_header">
+        </div>
+    </header>
+</div>
+<div class="container position-relative">
+
+    <h1 class="collection">Classement par points</h1>
+
+    <table class="table table-borderless">
+        <thead>
+            <tr>
+                <th scope="col">Rang</th>
+                <th scope="col">Pseudo</th>
+                <th scope="col">Points</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% set rang = 0 %}
+            {% for rankingPoint in rankingPoints %}
+            <tr>
+                <td scope="row">{% set myRang = myRang + 1 %} {{ myRang }}</td>
+                <td>{{ rankingPoint.pseudo }}</td>
+                <td>{{ rankingPoint.pointsTot }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h1 class="collection">Classement par quantité</h1>
+
+    <table class="table table-borderless">
+        <thead>
+            <tr>
+                <th scope="col">Rang</th>
+                <th scope="col">Pseudo</th>
+                <th scope="col">Bonbons</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% set rang = 0 %}
+            {% for rankingQuantity in rankingQuantities %}
+                <tr>
+                    <td scope="row">{% set myRang = myRang + 1 %} {{ myRang }}</td>
+                    <td>{{ rankingQuantity.pseudo }}</td>
+                    <td>{{ rankingQuantity.quantityTot }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
     </table>
 </div>
-
-    <h2>Classement par quantité</h2>
-
-    <div>
-<table class="table">
-    <thead>
-    <tr>
-        <th scope="col">Rang</th>
-        <th scope="col">Pseudo</th>
-        <th scope="col">Nombre de Bonbons</th>
-    </tr>
-    </thead>
-    <tbody>
-    {% set rang = 0 %}
-    {% for rankingQuantity in rankingQuantities %}
-        <tr>
-            <th scope="row">{% set myRang = myRang + 1 %} {{ myRang }}</th>
-            <td>{{ rankingQuantity.pseudo }}</td>
-            <td>{{ rankingQuantity.quantityTot }}</td>
-        </tr>
-    {% endfor %}
-    </tbody>
-</table>
-    </div>
 
 <nav class="navbar bg-blue fixed-bottom">
     <ul class="nav nav-pills m-auto justify-content-around">

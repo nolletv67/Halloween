@@ -22,6 +22,17 @@ p{
 
 a{
     color: white;
+
+}
+
+th, td{
+    color: white;
+    font-size: 18pt;
+}
+
+.table td{
+    padding-bottom: 0;
+    padding-top: 0;
 }
 
 .image_header{
