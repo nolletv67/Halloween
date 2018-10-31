@@ -2,18 +2,19 @@
 
 {% block content %}
 
-<p>Tu as récolté</p>
-    <ul>
+<div class="container-fluid p-0">
+<header class="carousel slide" data-ride="carousel">
+    <div class="carousel-item active d-block justify-content-center">
+        <img src="../assets/images/index_background.jpg" alt="Atelier de fleuriste" class="image_header">
+    </div>
+</header>
+<h1 class="position-relative mt-5">Tu as récolté</h1>
 
-        <li>{{ random1 }} {{ name1.name }}</li>
-
-        <li>{{ random2 }} {{ name2.name }}</li>
-
-
-        <li>{{ random3 }} {{ name3.name }}</li>
-
-
-    </ul>
+<div class="position-relative text-center mt-4">
+    <li class="text"><span>{{ random1 }}</span>{{ name1.name }}</li>
+    <li class="text"><span>{{ random2 }}</span>{{ name2.name }}</li>
+    <li class="text"><span>{{ random3 }}</span>{{ name3.name }}</li>
+</div>
 
 <nav class="navbar bg-blue fixed-bottom">
     <ul class="nav nav-pills m-auto justify-content-around">
@@ -31,5 +32,7 @@
         </li>
     </ul>
 </nav>
+
+
 
 {% endblock %}
